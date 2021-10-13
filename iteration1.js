@@ -82,21 +82,14 @@ const deleteLast = () => {
 button.addEventListener("click", deleteLast);
 
 //1.6
-let imgButton = document.createElement("button");
+/* let imgButton = document.createElement("button");
 let titleButton = document.createElement("button")
 document.body.appendChild(imgButton);
 document.body.appendChild(titleButton);
 imgButton.innerHTML = "delete img";
 titleButton.innerHTML = "delete title";
 
-/* const deleteElementImg = () => {
-	let deleteImg = myList.lastElementChild;
-	deleteImg.parentElement.removeChild(deleteImg);
-}
-const deleteElementTitle = () => {
-	let deleteTitle = myList.lastElementChild;
-	deleteTitle.parentElement.removeChild(deleteTitle);
-} */
+
 imgButton.addEventListener("click", deleteElementImg);
 titleButton.addEventListener("click", deleteElementTitle);
-
+ */
