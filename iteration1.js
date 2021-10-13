@@ -23,16 +23,16 @@ elemento de la lista.
 
 1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los 
 elementos de las listas que elimine ese mismo elemento del html. */
-//1.1
 
+//1.1
 const theCountries = ['Japón', 'Nicaragua', 'Suiza', 'Australia', 'Venezuela'];
 
 let newList = document.createElement("ul");
 document.body.appendChild(newList);
 for (const country of theCountries) {
-	let ListItem=document.createElement("li");
-	ListItem.innerHTML=country;
-	newList.appendChild(ListItem);
+	let listItem=document.createElement("li");
+	listItem.innerHTML=country;
+	newList.appendChild(listItem);
 }	
 
 // 1.2
@@ -71,4 +71,32 @@ for (const country of countries){
 }
 
 //1.5
+let button = document.createElement("button");
+document.body.appendChild(button);
+button.innerHTML = "delete";
+
+const deleteLast = () => {
+	let lastItem = myList.lastChild;
+	lastItem.parentNode.removeChild(lastItem);
+}
+button.addEventListener("click", deleteLast);
+
+//1.6
+let imgButton = document.createElement("button");
+let titleButton = document.createElement("button")
+document.body.appendChild(imgButton);
+document.body.appendChild(titleButton);
+imgButton.innerHTML = "delete img";
+titleButton.innerHTML = "delete title";
+
+/* const deleteElementImg = () => {
+	let deleteImg = myList.lastElementChild;
+	deleteImg.parentElement.removeChild(deleteImg);
+}
+const deleteElementTitle = () => {
+	let deleteTitle = myList.lastElementChild;
+	deleteTitle.parentElement.removeChild(deleteTitle);
+} */
+imgButton.addEventListener("click", deleteElementImg);
+titleButton.addEventListener("click", deleteElementTitle);
 
